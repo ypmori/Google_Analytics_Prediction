@@ -16,7 +16,7 @@
 
 - https://www.kaggle.com/c/ga-customer-revenue-prediction/data
 
-- The retailer has data over an observational period (Aug2016 - Apr2018), and they wish to predict total purchase(s) by these visitors in a future window (May2018 - Oct2018). A model will be trained 
+- The retailer has data over an observational period (Aug2016 - Apr2018), and they wish to predict total purchase(s) by these visitors in a future window (May2018 - Oct2018).
 
 ### 5. Business Impact of Work:
 
