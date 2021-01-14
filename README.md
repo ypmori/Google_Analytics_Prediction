@@ -22,7 +22,7 @@
 
 - It is commonly said that 20% of customers generate 80% of the revenue (80/20 rule). If a business can focus their marketing efforts on this population of customers, the strategy will yield higher revenue while also becoming more efficient with their budget.
 
-### 6. How business will use the statistical mdoel:
+### 6. How business will use the statistical model:
 
 - The model will forecast estimated dollar revenue per customer in the database. A successful model will allow the business/client to adjust their marketing strategy based on these predictions.
 
