@@ -63,7 +63,7 @@ $$ln(totals.transactionRevenue + 1)$$
 
 - **THE BUSINESS QUESTION** : In both cases, the log transformation must be undone to answer the business question: **can we predict revenue based on web traffic data?** In their current state, the models struggle to make accurate predictions on the dollar revenue amount, as evidenced by the extrordinarily high MSE (last row of MSE table). However, the input data can accurately predict the presence of a sale (True/False binary classification instead of revenue dollar prediction). Speficially, the `pageViews` column, which is an integer value representing how many page views a visitor accessed during a single web session, is highly predictive. 
 
-- ![mse](./images/hw3_mse_table.png) 
+- ![mse](./images/hw3_top_feature.png) 
 
 
 
