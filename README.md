@@ -107,5 +107,5 @@
 
 # PyTest + Coverage Results
 
-- ![pytest1](./images/pytest1.png) 
+- ![pytest1](./images/pytest_result1.png) 
 - ![pytest_cov](./images/pytest_coverage.png) 

@@ -57,7 +57,7 @@ if __name__ == '__main__':
         print({'Predicted to Make Purchase?' : bool(prediction)})
     except:
         LOGGER.info('Prediction Failed. Please check input data')
-            print({'Predicted to Make Purchase?' : ''})
+        print({'Predicted to Make Purchase?' : ''})
 
 
 
