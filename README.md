@@ -98,9 +98,25 @@ Using the trained model, I used the remaining 20% of testing data to evaluate th
 
 # Results:
 
-The random forest classifier achieves two very important results:
+- The random forest classifier achieves a very important result: It captures purchasers with much higher precision than the baseline audience. 
 
-	1. 
+	- Traditional digital advertising strategies work by "casting a wide net" over the target audience (simulated by baseline approach of targeting only U.S. visitors). 
+
+	- On the other hand, the random forest model carefully selects the target audience based on all their web traffic characteristics.
+
+- The detailed targeting by this model can directly translate into financial gains through:
+
+	- Increased conversion rate: the visitors reaching the website will be more likely to make a purchase
+
+		- This involves use of the top predictors list to inform future marketing campaigns
+
+	- Reduced cost basis for marketing/advertising with fewer people being targeted who will never make a purchase, there will be budget savings in terms of cost-per-click (CPC), cost-per-action (CPA), etc.
+
+- Other possible uses for these results include:
+
+	- Linking Google Analytics directly to Google Ads service, then building a targeted advertisement list using Visitor ID (from Google Analytics input data)
+
+	- Dynamic advertising strategies: Take advantage of Google's big data platform (BigQuery) to stream input data directly to the model and make live predicitons
 
 
 # Model Architecture
@@ -136,6 +152,30 @@ The random forest classifier achieves two very important results:
 
 - Output:
 `{'Predicted to Make Purchase?' : bool(prediction)}`
+
+
+# Instructions for Running the Model:
+
+Model was developed and tested with the following installations:
+
+	- `Python 3.8.5` 
+
+	- `conda version : 4.5.11`
+
+	- `Mac OS X 10.11.6 (El Capitan)`
+
+	- The specific package versions can be found in `requirements.txt`
+
+The Steps to running the model are outlined below:
+
+	- Clone Repository, then navigate to the root level. 
+
+	- Open `main.py` and edit the `SAMPLE_OBS` variable to input a custom dictionary object, following the input specs format.
+
+	- Save the program, then run in command line with `python main.py`
+
+	- The output of this program will be a print-out on the terminal/console which follows the output spec layout.
+
 
 
 # PyTest + Coverage Results
