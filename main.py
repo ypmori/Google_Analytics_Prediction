@@ -35,7 +35,7 @@ BUCKET_NAME = "stats404-mori"
 s3 = boto3.resource('s3')
 
 # CATEGORICAL_DTYPES = pkl.load(open( "CATEGORICAL_DTYPES.pkl", "rb" ))
-CATEGORICAL_DTYPES = pkl.loads(s3.Bucket(bucket_name).Object("CATEGORICAL_DTYPES.pkl").get()['Body'].read())
+CATEGORICAL_DTYPES = pkl.loads(s3.Bucket(BUCKET_NAME).Object("CATEGORICAL_DTYPES.pkl").get()['Body'].read())
 
 
 logging.basicConfig(level=logging.INFO)
@@ -49,15 +49,21 @@ if __name__ == '__main__':
     LOGGER.info('Loading Input Data...')
     df = dict_to_dataframe(obs_check(SAMPLE_OBS,CATEGORICAL_DTYPES),CATEGORICAL_DTYPES)
 
+    ### ---------------------------------------------------------------------------
+    ### --- Part 2: Feature Engineering
+    ### ---------------------------------------------------------------------------
     LOGGER.info('Peforming Feature Engineering on input data...')
 
     df['totals.transactionRevenue'] = df['totals.transactionRevenue'] > 0
     df.drop(['totals.transactionRevenue'], axis=1, inplace=True)
     df_encoded = pd.get_dummies(df, dummy_na=True)
 
+    ### ---------------------------------------------------------------------------
+    ### --- Part 3: Load Model and Run Prediction
+    ### ---------------------------------------------------------------------------
 
     # model = pkl.load(open("rf_classifier_model.pkl", "rb" ))
-    model = pkl.loads(s3.Bucket(bucket_name).Object("rf_classifier_model.pkl").get()['Body'].read())
+    model = pkl.loads(s3.Bucket(BUCKET_NAME).Object("rf_classifier_model.pkl").get()['Body'].read())
 
     LOGGER.info('Model Loaded. Running Prediction...')
 
