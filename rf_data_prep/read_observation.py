@@ -46,10 +46,10 @@ def dict_to_dataframe(input_dict, dtype_dict):
     return(df)
 
 
-### ONLY TESTING THE ABOVE 3 FUNCTIONS FOR HW5.
 
+### The following functions are not used in the current build, 
+### but may be implemented in the future.
 
-### TODO: THE FOLLOWING FUNCTIONS WILL BE COMPLETED BY FINAL PROJECT DELIVERY: 
 def revenue_to_binary(revenue):
     ''' Convert revenue amount to a binary response variable '''
     return(revenue > 0)
