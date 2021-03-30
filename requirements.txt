@@ -1,0 +1,5 @@
+numpy==1.19.2
+pandas==1.2.0
+scikit-learn==0.23.2
+s3fs==0.5.2
+boto3==1.17.23
